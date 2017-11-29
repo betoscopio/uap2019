@@ -1,15 +1,24 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Embracing the change, adapting to web development evolution</title>
+
+		<meta name="description" content="How to keep on track in software development">
+		<meta name="author" content="Beto Arancibia">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
 
-		<!-- Theme used for syntax highlighting of code -->
+		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
@@ -20,30 +29,473 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
 	</head>
+
 	<body>
+
 		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+					<h3>Embracing the change, adapting to web development evolution</h3>
+					<!--h3>The HTML Presentation Framework</h3-->
+					<p>
+						<small><a href="http://betoarancibia.com">Beto Arancibia</a> / <a href="http://twitter.com/betoscopio">@betoscopio</a></small>
+					</p>
+					<p>
+						<small>DrupalCamp São Paulo, November 25th, 2017</small>
+					</p>
+					</div>
+
+				</section>
+
+
+				<section>
+					<h2>Who is?</h2>
+					<p><small>@betoscopio</small></p>
+
+					<div id="left">
+						<img width="" height="440px" data-src="images/betocoding0.jpg" alt="Betoscopio">
+					</div>
+
+					<div id="right">
+							<ul>
+								<li>Studied Computer Science</li>
+								<li>Inspired by Free Software movement</p>
+								<li>Started with Drupal in 2010</li>
+								<li>Currently working at ECLAC</li>
+					</div>
+				</section>
+
+				<section>
+					<p>From Chile</p>
+					<p>
+					<img width="100%" height="" data-src="images/santiago_mountains.jpg" alt="montañas Santiago de Chile">
+					</p>
+				</section>
+
+				<section>
+					<h2>Who is?</h2>
+					<p><small>@betoscopio</small></p>
+
+					<div id="left">
+						<img width="" height="" data-src="images/beto-travel.jpg" alt="Beto traveling">
+					</div>
+
+					<div id="right">
+							<ul>
+								<li>Me, sometime ago</li>
+								<li class="fragment">While you travel you see diferent realities</li>
+								<li class="fragment">What you are used to, most of the times is not the "normal thing"</li>
+							</ul>
+					</div>
+				</section>
+
+				<section>
+					<section>
+					<h2>My Drupal Learing Path</h2>
+					<ul>
+					<li class="fragment">Found Drupal, because I wanted clean HTML code</li>
+					<li class="fragment">Teached Drupal myself</li>
+					<li class="fragment">DrupalCon SF 2010 (D6)</li>
+					<li class="fragment">I met another Drupaler about a year later for first time</li>
+				</ul>
+					<aside class="notes">
+						This slide has fragments which are also stepped through in the notes window.
+					</aside>
+				</section>
+
+					<section>
+						<h2>The Drupal Community</h2>
+					<ul>
+						<li class="fragment">Wanted to know other Drupalers</li>
+						<li class="fragment">So started to to talk with other Latin American drupaleros</li>
+						<li class="fragment">Started with regular meetings</li>
+						<li class="fragment">First Drupal Event Drupal Summit Latino 2013 (Ecuador)</li>
+					</ul>
+					</section>
+
+					<section data-background-image="images/drupalchile.jpg">
+						<p style="background-color: #333; opacity: 0.5;">DrupalCamp Santiago de Chile 2015</p>
+					</section>
+
+					<section data-background-image="images/drupalcamp-shout.png">
+					</section>
+
+				</section>
+
+				<section>
+					<h2>Embracing the change</h2>
+				</section>
+
+				<section>
+					<section>
+						<h4>Heraclitus of Ephesus (~500 BC)</h4>
+						<img class="stretch" data-src="images/heraclitus.jpg" alt="Heraclitus_of_Ephesos">
+					</section>
+
+					<section>
+						<p><em>Everything changes and nothing stands still.</em></p>
+						<p class="fragment"><em>All is flux, nothing stays still.</em></p>
+					</section>
+
+					<section>
+						<p><em>No man ever steps in the same river twice.</em></p>
+						<blockquote cite="http://www.thedailyphilosopher.org/daily/000011.php" class="fragment"><small>All things . . . are in flux like a river. Heraclitus’s insistence on the process of change
+							as fundamental to the world poses a question
+					  to us when we are facing difficult changes that we might want to deny or resist. By insisting that
+					  something or someone stay the same, could it be that we are destroying the very thing we wish to
+					  preserve? In any particular case, when we are resisting change, we might ask ourselves, is this
+					  like trying to stop a river’s waters from flowing?</small></blockquote>
+						<p><small><a href="http://www.thedailyphilosopher.org/daily/000011.php">The Dayly Philosopher: The only constant is change</a></small></p>
+					</section>
+
+			  </section>
+
+				<section>
+					<h2>Web development evolution</h2>
+				</section>
+
+				<section data-background-color="#ffffff">
+					<img width="100%" data-src="images/webmaster_fire.gif" alt="Webmaster fire">
+					<img class="stretch" data-src="images/malaysia_geocities.png" alt="Geocities">
+				</section>
+
+				<section>
+					<h2>Self-managing websites <em>(autoadministrables)</em></h2>
+
+					<ul>
+						<li>First Web Systems</li>
+						<li class="fragment">Client/Server applications</li>
+						<li class="fragment">Visual Basic, ActionScript</li>
+						<li class="fragment">ASP</li>
+						<li class="fragment">Java J2EE, JSF</li>
+						<li class="fragment">Web "recomendations"</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>The LAMP Golden Age</h2>
+
+					<ul>
+						<li>CMS disrruption</li>
+						<li class="fragment">Mambo (Joomla)</li>
+						<li class="fragment">Wordpress 1.x</li>
+						<li class="fragment">Drupal 4.x</li>
+						<li class="fragment">Media Wiki</li>
+						<li class="fragment">Complex web applications</li>
+						<li class="fragment">Google Maps, Facebook → Ajax</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Here comes the Ruby</h2>
+
+					<div id="left">
+						<img width="50%" data-src="images/1000px-Ruby_logo.png" alt="Ruby Logo">
+					</div>
+
+					<div id="right">
+							<ul>
+								<li>Ruby on Rails</li>
+								<li class="fragment">The RoR effect</p>
+								<li class="fragment">ORM, Scaffolding, Relection, "Real OOP"</li>
+								<li class="fragment">Dozens of PHP clones</li>
+								<li class="fragment">Did somebody said hype?</li>
+							</ul>
+					</div>
+				</section>
+
+				<section>
+					<p>
+					<img width="" height="420px" data-src="images/js-thegoodparts.jpg" alt="JS the good parts">
+					</p>
+
+					<p>Douglas Crockford (May 2008)</p>
+				</section>
+
+				<section>
+					<h2>The new cool kid in the block</h2>
+
+					<img class="stretch" data-src="images/js-history.png" alt="JS history">
+				</section>
+
+				<section>
+					<h2>Javascript projects trends</h2>
+					<img class="stretch" data-src="images/js-libs.png" alt="JS libs">
+				</section>
+
+				<section>
+					<h2>Language trends 2008-2017</h2>
+
+					<img class="stretch" data-src="images/lang-2008-2017.png" alt="lang trends">
+				</section>
+
+				<section>
+					<h2>Language trends 2012-2017</h2>
+
+					<img class="stretch" data-src="images/lang-2012-2017.png" alt="lang trends">
+				</section>
+
+				<section>
+					<h2>The "I Hate PHP" is cool era</h2>
+					<p>
+					<img width="" height="300px" data-src="images/php.jpg" alt="PHP hammer">
+					</p>
+
+					<ul>
+						<li>2012</li>
+						<li class="fragment"><a href="https://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/">PHP a factal of bad design</a></p>
+						<li class="fragment"><a href="https://blog.codinghorror.com/the-php-singularity">The PHP Singularity</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>PHP the Right Way</h2>
+
+					<p><a href="http://www.phptherightway.com/">http://www.phptherightway.com/</a></p>
+				</section>
+
+				<section>
+					<h2>Node.js</h2>
+
+					<p class="fragment">Hype already?</p>
+				</section>
+
+				<section>
+					<h2>Projects trends 2007-2017</h2>
+
+					<img class="stretch" data-src="images/cms-2007-2017.png" alt="cms trends">
+				</section>
+
+				<section>
+					<h2>Projects trends 2012-2017</h2>
+
+					<img class="stretch" data-src="images/cms-2012-2017.png" alt="cms trends">
+				</section>
+
+				<section>
+					<h2>The Rise of Microservices</h2>
+				</section>
+
+				<section>
+					<h2>Changes in infraestructure</h2>
+				</section>
+
+				<section>
+					<h2>In the beginning there was the FTP server</h2>
+
+					<ul>
+						<li class="fragment">FTP Uploads</li>
+						<li class="fragment">The WAMP Server</li>
+						<li class="fragment">... yes that means a production server with Apache + Windows</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>The shared services era</h2>
+
+					<ul>
+						<li class="fragment">Shared Hosts: Dreamhost, GatorHost, BlueHost ...</li>
+						<li class="fragment">"We only use PHP 4"</li>
+						<li class="fragment">VPS</li>
+						<li class="fragment">Virtualization</li>
+					</ul>
+				</section>
+
+				<section data-background-image="images/clouds.png">
+					<p style="background-color: #333; opacity: 0.5;">Here comes the Cloud</p>
+				</section>
+
+				<section data-background="#ffffff">
+					<p>
+					<img width="300" height="" data-src="images/aws-logo-large.png" alt="AWS">
+					<img width="300" height="" data-src="images/OpenStack-Logo.jpg" alt="OpenStack">
+					<img width="200" height="" data-src="images/gcplogo.jpg" alt="GCP">
+					<img width="200" height="" data-src="images/digitalocean.png" alt="Digital Ocean">
+					<img width="300" height="" data-src="images/Rackspace_Cloud.jpg" alt="Rack Space">
+					</p>
+				</section>
+
+				<section>
+					<h2>Platfform as a Service (PASS)</h2>
+				</section>
+
+				<section data-background="#ffffff">
+					<p><img width="600" height="" data-src="images/Heroku.png" alt="Heroku"></p>
+					<p>
+					<img width="200" height="" data-src="images/pantheon-logo-large.jpg" alt="Pantheon.io">
+					<img width="200" height="" data-src="images/platform-square.png" alt="Platform.sh">
+					<img width="200" height="" data-src="images/IO_amazee_square.jpg" alt="Amazee.io">
+					</p>
+				</section>
+
+				<section data-background="#ffffff">
+					<p>
+						 <img width="" height="" data-src="images/DockerLogo.png" alt="Docker">
+					</p>
+				</section>
+
+				<section data-background="#0678be">
+					<h2>About Drupal</h2>
+
+					<ul>
+						<li>drop.org  → 2000</li>
+						<li>Drupal 1 - 3 → 2001</li>
+						<li>Drupal 4.0.0 → 2002</li>
+						<li>Drupal 4.1.0, 4.2.0, 4.3.0 → 2003</li>
+						<li>Drupal 4.4.0, 4.5.0 → 2004</li>
+						<li>Drupal 4.6.0 → 2005</li>
+						<li>Drupal 4.7.0 → 2006</li>
+						<li>Drupal 5.0 → 2007</li>
+						<li>(<strong>Go PHP5 campaign → 2007</strong>)</li>
+						<li>Drupal 6.0 → 2008</li>
+						<li>Drupal 7.0 → 2010</li>
+					</ul>
+				</section>
+
+				<section data-background="#0678be">
+					<h2>About Drupal</h2>
+
+					<p><strong>Getting off the Island.</strong></p>
+					<ul>
+						<li>Drupal 8.0.0 → 2015</li>
+						<li>Drupal 8.1.0, 8.2.0  → 2016</li>
+						<li>Drupal 8.3.0, 8.4.0 → 2017</li>
+					</ul>
+				</section>
+
+				<section>
+					<blockquote>Drupal is ambitious digital experiences</blockquote>
+					<img width="80%" data-src="images/drupal-ambitious.gif" alt="Drupal Ambitious">
+
+					<p><small><a href="https://dri.es/state-of-drupal-presentation-september-2017">State of Drupal, September 2017 - Dries</a></small></p>
+					Future: https://dri.es/acquia-engage-2017-keynote
+				</section>
+
+				<section>
+					<h2>Team work organization</h2>
+
+					<ul>
+					<li class="fragment">In the beginning there was <strong>the Webmaster</strong></p>
+					<li class="fragment">The "programmer" + the "designer"</li>
+					<li class="fragment">Programmer + designer + editor</li>
+					<li class="fragment">The IT guy(s) + developer + editor + project manager</li>
+					<li class="fragment">The infraestructure team + backend developer + front end developer + QA team + editorial team + project manager(s) + marketing team</li>
+				  </ul>
+				</section>
+
+				<section data-background-color="#ffffff">
+					<img class="stretch" data-src="images/willy-developers.png" alt="Willy">
+				</section>
+
+				<section>
+					<h2>The "Full Stack Developer"</h2>
+				</section>
+
+				<section>
+					<h2>The "Full Stack Developer"</h2>
+					<img class="stretch" data-src="images/unicorn.jpg" alt="Unicorn">
+				</section>
+
+				<section>
+						<h5><a href="http://www.zeldman.com/2007/07/02/let-there-be-web-divisions/">Let there be web divisions</a></h5>
+
+						<img width="70%" height="" data-src="images/zeldman.svg" alt="Zeldman">
+
+						<p><small>Jeffrey Zeldman, July 2007</small></p>
+				</section>
+
+				<section>
+						<h2><a href="https://www.drupalcamp.cr/en/node/126">My Team Is New to Drupal: What Should I Know?</a></h2>
+
+						<p><small>by Carlos Ospina, DrupalCamp Costa Rica 2017</small></p>
+				</section>
+
+				<section>
+					<h2>The "Future" is now</h2>
+					<p  class="fragment">... somewhere</p>
+				</section>
+
+
+				<section>
+					<p>Crockford on JavaScript - Volume 1: The Early Years</p>
+					<iframe width="640px" height="380px" src="https://www.youtube.com/embed/JxAXlJEmNMg" data-autoplay></iframe>
+					<blockquote>"Good ideas took time to become mainstream..."</blockquote>
+				</section>
+
+				<section>
+					<h2>How to adapt?</h2>
+					<p  class="fragment">Be an agent of change</p>
+					<p  class="fragment">If it doesn't work</p>
+					<p  class="fragment">... try it a couple of more times,</p>
+					<p  class="fragment">at least.</p>
+				</section>
+
+				<section>
+					<img class="stretch" data-src="images/lifes-too-short.jpg" alt="Life too short">
+          <p><small style="size:0.5em"><a href="https://www.jobsintown.de">From jobsintown.de Campaign</a></small></p>
+
+				</section>
+
+				<section >
+					<ol>
+						<li>Always look arround</li>
+						<li class="fragment">Everything you know is changing</li>
+						<li class="fragment">Learn to adapt</li>
+						<li class="fragment">Shape your environment or move on</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>The world is smaller</h2>
+					<p  class="fragment">... be part of something bigger.</p>
+				</section>
+
+				<section>
+					<h2>Obrigado</h2>
+						<p><small>@betoscopio</small></p>
+				</section>
+
 			</div>
+
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+		<script src="plugin/markdown/marked.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
 
 		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
 		</script>
+
 	</body>
 </html>
